@@ -1,13 +1,15 @@
 import React from 'react'
-import '../styles.css'
-import logo from '../assets/logo-negro.png'
+import '../styles/todo.css'
+import logo from '../assets/logo/logo-negro.png'
 
 const NavBar = () => {
     return (
         <nav>
             {/* NAV IZQUIERDA */}
             <div className="izq">
-                <a href="#"><img className='logo' src={logo}></img></a>
+                <a href="#">
+                    <img className='logo' src={logo}></img>
+                </a>
             </div>
 
             {/* NAV DERECHA */}

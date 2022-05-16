@@ -1,6 +1,8 @@
 import React from 'react'
-import '../styles/todo.css'
+import '../styles/general.scss'
+/* probablemente la navbar tambien sea importada a otro componente padre y esta linea borrada */
 import logo from '../assets/logo/logo-negro.png'
+import CartWidget from "./CartWidget"
 
 const NavBar = () => {
     return (
@@ -21,18 +23,12 @@ const NavBar = () => {
                     <input type="search" placeholder="Buscar producto.." required></input>
                 </form>
 
-                {/* carrito de compras + modal */}
-                <button id="open-carrito" className="material-icons-outlined carrito">shopping_cart
-                    <div className="contenido-mini">
-                        <div className="mini">
-                            <span className="cantidad-total">0</span>
-                        </div>
-                    </div>
-                </button>
+                {/* carrito de compras */}
+                <CartWidget/>
                 
                 {/* dark/light mode */}
-                <button className="material-icons-outlined tema">light_mode</button>
                 <button className="material-icons-outlined tema">bedtime</button>
+                <button className="material-icons-outlined tema">light_mode</button>
 
                 {/* iniciar sesion + modal */}
                 <a href="#" id="open-login">Log In</a>

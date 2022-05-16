@@ -1,0 +1,19 @@
+@import 'variables';
+
+* {
+    font-family: var(--font1);
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: var(--b1);
+    font-size: 14px;
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+}

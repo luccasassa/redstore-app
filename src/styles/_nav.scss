@@ -12,9 +12,8 @@ nav {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 3fr;
 
-    position: fixed;
+    position: sticky;
     top: 0;
-    z-index: 9;
 
     .izq {
         grid-area: izq;

@@ -1,7 +1,6 @@
-import React from 'react'
-import '../styles/general.scss'
-/* probablemente la navbar tambien sea importada a otro componente padre y esta linea borrada */
-import logo from '../assets/logo/logo-negro.png'
+//assets
+import logoNegro from '../assets/logo/logo-negro.png'
+//components
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
@@ -10,7 +9,7 @@ const NavBar = () => {
             {/* NAV IZQUIERDA */}
             <div className="izq">
                 <a href="#">
-                    <img className='logo' src={logo}></img>
+                    <img className='logo' src={logoNegro}></img>
                 </a>
             </div>
 

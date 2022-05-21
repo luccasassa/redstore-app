@@ -1,9 +1,5 @@
 const ItemListContainer = (props) => {
-    return (
-        <h1>
-            {props.saludo}
-        </h1>
-    )
+    return <span>{props.description}</span>
 }
 
 export default ItemListContainer;

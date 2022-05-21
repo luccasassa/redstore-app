@@ -1,7 +1,7 @@
-//styles
 import './styles/general.scss'
-//components
+
 import NavBar from './components/NavBar';
+import ItemCount from "./components/ItemCount";
 import ItemListContainer from './components/ItemListContainer';
 
 function App() {
@@ -9,7 +9,10 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer saludo="Hola! Soy una PROP"/>
+      <hr/>
+      <ItemCount initial="1" stock="5"/>
+      <br />
+      <ItemListContainer description="Initial(1) - Stock(5)"/>
     </div>
   );
 }

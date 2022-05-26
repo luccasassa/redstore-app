@@ -2,71 +2,98 @@
 @import 'static';
 
 main{
-    border: 1px solid red;
+    h1 {
+        text-align: center;
+    }
 
     .productos {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, 300px);
+        grid-gap: 35px;
+        justify-content: center;
 
         .producto {
-            border: 1px solid black;
-            width: 200px;
-            height: 500px;
+            text-align: center;
             display: flex;
             flex-direction: column;
-
-            // .titulo {
-
-            // }
-    
-            // .subtitulo {
-    
-            // }
-    
-            .precio {
-                text-transform: bold;
-            }
-
-            img {
-                width: 100px;
-            }
-
-            .cantidades {
-                .restar,
-                .sumar {
-                    border: none;
-                    color: var(--negro);
-                    background-color: var(--sombraClarita);
-                    width: 30px;
-                    height: 30px;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                }
+            justify-content: space-evenly;
             
-                .count {
-                    font-weight: bold;
-                    margin: 0 8px;
+            padding: 5px;
+            background-color: transparent;
+            box-shadow: 5px 5px 10px var(--clarito1),
+            -5px -5px 10px var(--clarito2);
+
+            .producto-detalle {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .titulo {
+                    font-size: 1.5rem;
+                    margin-top: 10px;
+                }
+        
+                .subtitulo {
+                    font-size: 1rem;
+                    color: var(--a9);
+                }
+
+                img {
+                    width: 200px;
+                    margin: auto;
+                }
+        
+                .precio {
                     font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-top: 15px;
                 }
             }
 
-            .agregar {
-                width: 200px;
-                color: var(--negro);
-                background-color: transparent;
-                border: var(--negro) solid 1px;
-                padding: 10px;
-                cursor: pointer;
-
-                &:hover {
-                    color: #fff;
-                    border: 1px solid --var(b9);
-                    background-color: --var(b9);
-                    transition: ease 0.2s;
+            .producto-eleccion {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 20px 0;
+                
+                .cantidades {
+                    .restar,
+                    .sumar {
+                        border: none;
+                        color: var(--negro);
+                        background-color: var(--sombraClarita);
+                        width: 30px;
+                        height: 30px;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+                
+                    .count {
+                        font-weight: bold;
+                        margin: 0 8px;
+                        font-size: 1.2rem;
+                    }
                 }
-
-                &:active {
-                    color: #000;
+    
+                .agregar {
+                    width: 180px;
+                    color: var(--negro);
+                    background-color: transparent;
+                    border: var(--negro) solid 1px;
+                    padding: 10px;
+                    cursor: pointer;
+    
+                    &:hover {
+                        color: #fff;
+                        border: 1px solid var(--a9);
+                        background-color: var(--a9);
+                        transition: ease 0.2s;
+                    }
+    
+                    &:active {
+                        color: #000;
+                    }
                 }
             }
         }

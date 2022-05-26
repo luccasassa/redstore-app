@@ -1,4 +1,4 @@
-# REDStore App
+# RedStore App
 
 Tienda Online RedStore de reventa de productos Sony
 
@@ -14,7 +14,6 @@ Tienda Online RedStore de reventa de productos Sony
 - React Router Dom para navegación entre vistas
 - Google Icons para insertar íconos fácilmente (ej: shopping_cart)
 
-### Autor
+## Autor
 
-Luca Sassaroli -
-2022
+Sassaroli Luca

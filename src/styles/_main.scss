@@ -2,7 +2,73 @@
 @import 'static';
 
 main{
-    .banners{
-        display: flex;
+    border: 1px solid red;
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        .producto {
+            border: 1px solid black;
+            width: 200px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+
+            // .titulo {
+
+            // }
+    
+            // .subtitulo {
+    
+            // }
+    
+            .precio {
+                text-transform: bold;
+            }
+
+            img {
+                width: 100px;
+            }
+
+            .cantidades {
+                .restar,
+                .sumar {
+                    border: none;
+                    color: var(--negro);
+                    background-color: var(--sombraClarita);
+                    width: 30px;
+                    height: 30px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            
+                .count {
+                    font-weight: bold;
+                    margin: 0 8px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .agregar {
+                width: 200px;
+                color: var(--negro);
+                background-color: transparent;
+                border: var(--negro) solid 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                    border: 1px solid --var(b9);
+                    background-color: --var(b9);
+                    transition: ease 0.2s;
+                }
+
+                &:active {
+                    color: #000;
+                }
+            }
+        }
     }
 }

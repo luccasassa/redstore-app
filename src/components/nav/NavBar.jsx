@@ -1,6 +1,3 @@
-//assets
-import logoNegro from '../assets/logo/logo-negro.png'
-//components
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
@@ -9,7 +6,7 @@ const NavBar = () => {
             {/* NAV IZQUIERDA */}
             <div className="izq">
                 <a href="#">
-                    <img className='logo' src={logoNegro}></img>
+                    <img className='logo' src="./assets/logo/logo-negro.png"></img>
                 </a>
             </div>
 

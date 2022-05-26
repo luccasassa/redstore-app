@@ -1,18 +1,15 @@
 import './styles/general.scss'
-
-import NavBar from './components/NavBar';
-import ItemCount from "./components/ItemCount";
-import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/nav/NavBar';
+import Banners from './components/main/Banners'
+import ItemListContainer from './components/main/ItemListContainer';
 
 function App() {
 
   return (
-    <div className="App">
+    <div>
       <NavBar/>
-      <hr/>
-      <ItemCount initial="1" stock="5"/>
-      <br />
-      <ItemListContainer description="Initial(1) - Stock(5)"/>
+      <Banners/>
+      <ItemListContainer productos={'Todos los productos'}/>
     </div>
   );
 }

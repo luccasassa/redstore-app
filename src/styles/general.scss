@@ -1,11 +1,8 @@
 @import 'variables';
 @import 'static';
 @import 'nav';
-@import 'asdasd';
-
-*{
-    user-select: none;
-}
+@import 'main';
+@import 'footer';
 
 .dark {
     --b1: #111;

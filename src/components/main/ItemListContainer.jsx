@@ -1,10 +1,13 @@
+import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 
-const ItemListContainer = ({productos}) => {
+const ItemListContainer = ({titulo}) => {
+    const {id} = useParams()
+    
     return (
         <main>
-            <h1>{productos}</h1>
-            <ItemList/>
+            <h1>{id ? id : titulo}</h1>
+            <ItemList category={id}/>
         </main>
     )
 }

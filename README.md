@@ -4,7 +4,7 @@ E-commerce de productos Sony.
 
 ## Demo ¬
 
-![Alt Text](./public/vid/demo.mp4)
+![Alt Text](./public/vid/demo.gif)
 
 ## Instalación ¬
 

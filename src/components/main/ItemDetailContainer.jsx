@@ -9,7 +9,7 @@ const ItemDetailContainer = ({}) => {
     
     useEffect(() => {
         const promesaDetail = new Promise((resolve, reject) => {
-            resolve(db.find((i) => i.id == id))
+          resolve(db.find((i) => i.id == id))
         })
 
         promesaDetail

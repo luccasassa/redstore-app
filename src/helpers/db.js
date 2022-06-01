@@ -350,58 +350,58 @@ const db = [
     // Objetivos (5)
     {
         id: 31,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
+        titulo: "SEL2470GM2",
+        subtitulo: "Objetivo FE 24-70mm F2.8 GMaster II",
+        card: "Objetivo SEL2470GM2",
+        descripcion: "Objetivo zoom estándar G Master superior. Cuatro motores lineales XD (dinámico extremo) de alta potencia garantizan un rendimiento de AF extraordinario. 5 elementos asféricos, entre los que se incluyen 2 de tipo XA, 2 elementos de cristal ED y 2 Super ED para obtener una alta resolución. Un bokeh fantástico de F2,8 en todo el alcance del zoom, además de un excelente rendimiento en los primeros planos.",
         categoria: "Objetivos",
-        stock: "",
-        precio: 1,
-        img: ""
+        stock: "5",
+        precio: 309290,
+        img: "https://i.imgur.com/rfT676X.png"
     },
     {
         id: 32,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
+        titulo: "SELP1635G",
+        subtitulo: "Objetivo FE PZ 16-35mm F4 G",
+        card: "Objetivo SELP1635G",
+        descripcion: "Objetivo G con zoom electrónico gran angular ultraligero y versátil. Dos elementos AA, un elemento asférico estándar y un elemento asférico ED para disfrutar de una alta resolución en toda el área de la imagen. Los dos motores lineales XD ofrecen un gran impulso para lograr un AF rápido, silencioso y con poca vibración. El nuevo sistema de zoom con cuatro motores lineales XD ofrece un control fluido y una respuesta inmediata. Tres anillas de control (zoom, enfoque y apertura)",
         categoria: "Objetivos",
-        stock: "",
-        precio: 1,
-        img: ""
+        stock: "5",
+        precio: 193315,
+        img: "https://i.imgur.com/ByaM6LI.png"
     },
     {
         id: 33,
-        titulo: "",
-        subtitulo: "",
-        card: "ejemplo",
-        descripcion: "",
+        titulo: "SEL70200GM2",
+        subtitulo: "Objetivo FE 70-200mm F2.8 GMaster OSS II",
+        card: "Objetivo SEL70200GM2",
+        descripcion: "Zoom telescópico superior de la serie G Master. Un elemento XA, dos cristales Super ED y tres ED para una resolución alta en todo el alcance del zoom. Los motores lineales XD ofrecen una excelente respuesta y baja vibración para contar con un AF rápido y preciso. Nanorrevestimiento antirreflectante II de Sony para minimizar destellos e imágenes superpuestas. Funcionalidad, movilidad y fiabilidad para satisfacer las necesidades de captura profesional.",
         categoria: "Objetivos",
-        stock: "",
-        precio: 1,
-        img: ""
+        stock: "5",
+        precio: 386703,
+        img: "https://i.imgur.com/Qhgj21R.png"
     },
     {
         id: 34,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
+        titulo: "SEL14F18GM",
+        subtitulo: "Objetivo FE 14mm F1.8 GMaster",
+        card: "Objetivo SEL14F18GM",
+        descripcion: "Objetivo prime ultra gran angular superior G Master. Elementos XA y de cristal Super ED y dos cristales ED para una alta resolución en toda la imagen. Perspectivas ultra gran angular con gran apertura en un objetivo increíblemente compacto. Los motores lineales XD ofrecen una excelente respuesta y baja vibración para contar con un AF rápido y preciso. El botón de fijación de enfoque y otras funciones satisfacen tus necesidades de captura profesionales.",
         categoria: "Objetivos",
-        stock: "",
-        precio: 1,
-        img: ""
+        stock: "5",
+        precio: 206203,
+        img: "https://i.imgur.com/pheelj3.png"
     },
     {
         id: 35,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
+        titulo: "SEL24F28G",
+        subtitulo: "Objetivo FE 24mm F2.8 GPrime",
+        card: "Objetivo SEL24F28G",
+        descripcion: "Objetivo G prime gran angular. Este objetivo reúne la imagen de alta calidad y el atractivo bokeh del objetivo G en un diseño compacto con gran calidad de construcción y funcionamiento intuitivo. Es fácil de transportar e ideal para fotos vistosas en gran angular. El AF rápido, preciso y silencioso es ideal para fotos y vídeos, y garantiza la captura de esos momentos vitales. Motores lineales dobles para un enfoque automático rápido, preciso y silencioso.",
         categoria: "Objetivos",
-        stock: "",
-        precio: 1,
-        img: ""
+        stock: "5",
+        precio: 89999,
+        img: "https://i.imgur.com/nbht9Fg.png"
     },
     // Reproductores (3)
     {
@@ -440,58 +440,58 @@ const db = [
     // Televisores (5)
     {
         id: 39,
-        titulo: "",
-        subtitulo: "",
-        card: "ejemplo",
-        descripcion: "",
-        categoria: "Televisores",
-        stock: "",
-        precio: 1,
-        img: ""
+        titulo: "CFI-1102A",
+        subtitulo: "PlayStation 5 PS5 Blu-ray Edition Console (AUS Plug) CFI-1002A / CFI-1102A",
+        card: "PS5® CFI-1102A",
+        descripcion: "Aprovecha la potencia de una SSD con E/S integradas, una CPU y GPU personalizadas que reinventan las reglas de lo que una consola PlayStation es capaz de hacer. Ray tracing aporta nuevos niveles de realismo con reflejos y sombras naturales a los juegos de PS5. Disfruta de una experiencia de juego fluida con una alta velocidad de fotogramas de hasta 120 fps en juegos compatibles y salida de 120 Hz en pantallas 4K.",
+        categoria: "PlayStation®",
+        stock: "10",
+        precio: 91999,
+        img: "https://i.imgur.com/DBYXjLy.png"
     },
     {
         id: 40,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
-        categoria: "Televisores",
+        titulo: "CFI-ZCT1W",
+        subtitulo: "Mando inalámbrico DualSense™ PlayStation 5",
+        card: "DualSense™ CFI-ZCT1W",
+        descripcion: "El mando inalámbrico DualSense mantiene muchas características del DUALSHOCK®4, que vuelven para una nueva generación de juegos. Éste ofrece una inmersiva retroalimentación háptica, gatillos adaptativos dinámicos y un micrófono integrado, todo ello en un diseño icónico. Siente la respuesta táctil capaz de transmitir las acciones del juego con dos activadores que sustituyen a los motores de vibración tradicionales. Cuando lo tienes en las manos, estas vibraciones dinámicas son capaces de simular todo tipo de sensaciones, como los elementos del entorno o el retroceso de diferentes armas.",
+        categoria: "PlayStation®",
         stock: "",
-        precio: 1,
-        img: ""
+        precio: 14999,
+        img: "https://i.imgur.com/fo1vG8c.png"
     },
     {
         id: 41,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
-        categoria: "Televisores",
-        stock: "",
-        precio: 1,
-        img: ""
+        titulo: "CFI-ZWH1",
+        subtitulo: "Auriculares inalámbricos PULSE 3D™ PlayStation 5",
+        card: "Pulse 3D CFI-ZWH1",
+        descripcion: "Los auriculares inalámbricos PULSE 3D se han diseñado específicamente para ofrecer el audio 3D que la PlayStation®5 ha hecho posible. Con la tecnología de audio 3D Tempest, la consola PS5 te sumerge en paisajes sonoros increíbles que te permitirán disfrutar del sonido como si viniese de todas direcciones. Juega con estilo gracias a las almohadillas de felpa y la banda de sujeción de la diadema mejoradas.",
+        categoria: "PlayStation®",
+        stock: "6",
+        precio: 24999,
+        img: "https://i.imgur.com/JTwIbOG.png"
     },
     {
         id: 42,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
-        categoria: "Televisores",
-        stock: "",
-        precio: 1,
-        img: ""
+        titulo: "CFI-ZEY1",
+        subtitulo: "Cámara HD PS VR PlayStation 5",
+        card: "Cámara HD CFI-ZEY1",
+        descripcion: "Con lentes duales de 1080p y un soporte integrado, la cámara HD funciona a la perfección con las herramientas de eliminación del fondo de la PS5 para convertirte en el centro de atención. Crea una grabación o transmisión de tu partida rápidamente con el botón de creación de tu mando inalámbrico DualSense™. También puedes añadir tu imagen a los vídeos de tus partidas con la cámara HD mientras los transmites en modo imagen en imagen, gracias a su capacidad de recortar el fondo o eliminarlo por completo con una pantalla verde.",
+        categoria: "PlayStation®",
+        stock: "2",
+        precio: 8999,
+        img: "https://i.imgur.com/4FFi8MO.png"
     },
     {
         id: 43,
-        titulo: "",
-        subtitulo: "",
-        card: "",
-        descripcion: "",
-        categoria: "Televisores",
-        stock: "",
-        precio: 1,
-        img: ""
+        titulo: "CUH-ZVR1",
+        subtitulo: "Casco PS VR Inmersivo PlayStation 5",
+        card: "Casco VR CUH-ZVR1",
+        descripcion: "Conviértete en el centro de extraordinarios universos de juego con juegos exclusivos de PS VR gracias a la potencia de tu consola PlayStation®. Visión de 360 grados!, observa cómo un mundo interactivo cobra vida a tu alrededor con un campo de visión sin cortes mires a donde mires. Descubre una nueva dimensión de sonido: la tecnología audio 3D te permite localizar la procedencia y la distancia de los sonidos que oyes a tu alrededor. Experimenta nuevas realidades con una pantalla OLED personalizada y gráficos a 120 fps para disfrutar de una inmersión completa en tus juegos.",
+        categoria: "PlayStation®",
+        stock: "3",
+        precio: 41999,
+        img: "https://i.imgur.com/j1szYiH.png"
     }
 ]
 

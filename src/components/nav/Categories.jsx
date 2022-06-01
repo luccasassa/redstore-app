@@ -27,8 +27,9 @@ const Categories = () => {
             <div>
                 <Link to={'/Categoria/Reproductores'}>REPRODUCTORES</Link>
             </div>
+            |
             <div>
-                <Link to={'/Categoria/Televisores'}>TELEVISORES</Link>
+                <Link to={'/Categoria/PlayStation®'}>PLAYSTATION®</Link>
             </div>
         </nav>
     )

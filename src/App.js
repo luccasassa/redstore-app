@@ -3,6 +3,7 @@ import './styles/general.scss'
 import NavBar from './components/nav/NavBar';
 import ItemListContainer from './components/main/ItemListContainer';
 import ItemDetailContainer from './components/main/ItemDetailContainer';
+import Footer from "./components/footer/Footer"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Producto/:id" element={<ItemDetailContainer />}/>
         </Routes>
         
+        <Footer/>
       </BrowserRouter>
     </div>
   );

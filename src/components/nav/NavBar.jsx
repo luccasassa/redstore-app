@@ -10,7 +10,7 @@ const NavBar = () => {
                 {/* NAV IZQUIERDA */}
                 <div className="izq">
                     <Link to={'/'}>
-                        <img className='logo' src="https://i.imgur.com/ZJWivtA.png"></img>
+                        <img className='logo' src="https://i.imgur.com/5GRUqAi.png"></img>
                     </Link>
                 </div>
 

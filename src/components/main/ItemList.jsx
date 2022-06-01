@@ -27,7 +27,7 @@ const ItemList = ({category}) => {
                 ? products
                     .filter((item) => item.categoria === category)
                     .map((item) => <Item item={item} key={item.id}/>)
-                : products.map((item) => <Item item={item} key={item.id}/>)} 
+                : products.map((item) => <Item item={item} key={item.id}/>)}
         </div>
     )
 }

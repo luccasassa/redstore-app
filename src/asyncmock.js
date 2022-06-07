@@ -495,4 +495,26 @@ const db = [
     }
 ]
 
-export default db
+export const getProducts = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(db)
+        }, 500)
+    })
+}
+
+export const getProductsId = (id) => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(db.find(prod => prod.id === id))
+        }, 2000)
+    })
+}
+
+export const getProductsCategory = (categoryId) => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(db.filter(prod => prod.categoria === categoryId))
+        }, 2000)
+    })
+}

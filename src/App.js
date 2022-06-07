@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles/general.scss'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/nav/NavBar';
 import ItemListContainer from './components/main/ItemListContainer';
 import ItemDetailContainer from './components/main/ItemDetailContainer';

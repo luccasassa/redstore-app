@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'static';
+@import 'nav';
+@import 'main';
+@import 'footer';
+
+.dark {
+    --b1: #111;
+    --b2: #f9f9f9;
+    --b3: #f9f9f9;
+
+    --nav: #2b2929;
+    
+    --blanco: #000;
+    --negro: #fff;
+    
+    --sombraOscura: rgba(250, 250, 250, 0.5);
+    --sombraClarita: rgba(250, 250, 250, 0.2);
+}

@@ -1,0 +1,290 @@
+@import 'variables';
+@import 'static';
+
+main{
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--b2);
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 300px);
+        grid-gap: 35px;
+        justify-content: center;
+
+        .producto {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            grid-gap: 50px;
+            
+            padding: 10px;
+            background-color: transparent;
+            box-shadow: 5px 5px 10px var(--clarito1),
+            -5px -5px 10px var(--clarito2);
+
+            &:hover {
+                box-shadow: 5px 5px 10px var(--clarito2),
+                -5px -5px 10px var(--clarito1);
+            }
+
+            img {
+                width: 200px;
+                margin: auto;
+            }
+
+            .producto-detalle {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+
+                span {
+                    font-size: 1.2rem;
+                    margin: 5px 0;
+                }
+        
+                .precio {
+                    font-weight: bold;
+                    font-family: var(--font2);
+
+                    &::before {
+                        content: "$ ";
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item-detail {
+    display: grid;
+    grid-template-areas: "datos imagen";
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 2.4fr;
+    
+    .left {
+        grid-area: "datos";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-gap: 20px;
+        margin-left: 80px;
+
+        .titulo-detail {
+            font-size: 4rem;
+        }
+
+        .subtitulo-detail {
+            font-size: 2rem;
+            color: var(--a9);
+        }
+
+        .descripcion-detail {
+            font-size: 1.1rem;
+        }
+
+        .precio-detail {
+            font-size: 1.1rem;
+            font-weight: bold;
+
+            &::before {
+                content: "$ ";
+            }
+        }
+
+        .producto-eleccion {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            grid-gap: 20px;
+            
+            .cantidades {
+                .restar,
+                .sumar {
+                    width: 25px;
+                    height: 25px;
+                    color: var(--negro);
+                    background-color: var(--sombraClarita);
+                    font-size: 1rem;
+                    border: none;
+                    cursor: pointer;
+                }
+            
+                .count {
+                    font-weight: bold;
+                    margin: 0 5px;
+                    font-size: 1rem;
+                }
+            }
+
+            .agregar {
+                width: 200px;
+                color: var(--negro);
+                background-color: transparent;
+                border: var(--negro) solid 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                    border: 1px solid var(--a9);
+                    background-color: var(--a9);
+                    transition: ease 0.2s;
+                }
+
+                &:active {
+                    color: #000;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+
+            .ver-carrito {
+                width: 200px;
+                color: var(--negro);
+                background-color: transparent;
+                border: var(--negro) solid 1px;
+                padding: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                    border: 1px solid var(--a8);
+                    background-color: var(--a8);
+                    transition: ease 0.2s;
+                }
+
+                &:active {
+                    color: #000;
+                }
+            }
+        }
+
+    }
+
+    .right {
+        grid-area: "imagen";
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.loader {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 175px;
+    height: 100px;
+
+    span {
+        display: block;
+        background: #ccc;
+        width: 7px;
+        height: 10%;
+        border-radius: 14px;
+        margin-right: 5px;
+        float: left;
+        margin-top: 25%;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &:nth-child(1) {
+            animation: load var(--speed) 1.2s infinite linear;
+        }
+
+        &:nth-child(2) {
+            animation: load var(--speed) 1s infinite linear;
+        }
+
+        &:nth-child(3) {
+            animation: load var(--speed) 0.8s infinite linear;
+        }
+
+        &:nth-child(4) {
+            animation: load var(--speed) 0.6s infinite linear;
+        }
+
+        &:nth-child(5) {
+            animation: load var(--speed) 0.4s infinite linear;
+        }
+
+        &:nth-child(6) {
+            animation: load var(--speed) 0.2s infinite linear;
+        }
+
+        &:nth-child(7) {
+            animation: load var(--speed) 0s infinite linear;
+        }
+
+        &:nth-child(8) {
+            animation: load var(--speed) 0s infinite linear;
+        }
+
+        &:nth-child(9) {
+            animation: load var(--speed) 0s infinite linear;
+        }
+
+        &:nth-child(10) {
+            animation: load var(--speed) 0.2s infinite linear;
+        }
+
+        &:nth-child(11) {
+            animation: load var(--speed) 0.4s infinite linear;
+        }
+
+        &:nth-child(12) {
+            animation: load var(--speed) 0.6s infinite linear;
+        }
+
+        &:nth-child(13) {
+            animation: load var(--speed) 0.8s infinite linear;
+        }
+
+        &:nth-child(14) {
+            animation: load var(--speed) 1s infinite linear;
+        }
+
+        &:nth-child(15) {
+            animation: load var(--speed) 1.2s infinite linear;
+        }
+    }
+    
+    @keyframes load {
+        0% {
+            background: #ccc;
+            margin-top: 25%;
+            height: 10%;
+        }
+    
+        50% {
+            background: #444;
+            height: 100%;
+            margin-top: 0%;
+        }
+    
+        100% {
+            background: #ccc;
+            height: 10%;
+            margin-top: 25%;
+        }
+    }
+}

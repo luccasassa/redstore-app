@@ -1,10 +1,11 @@
 @import 'variables';
 @import 'static';
 
+h1 {
+    text-align: center;
+}
+
 main{
-    h1 {
-        text-align: center;
-    }
 
     a {
         text-decoration: none;
@@ -148,7 +149,8 @@ main{
 
         a {
             text-decoration: none;
-
+            width: 200px;
+            
             .ver-carrito {
                 width: 200px;
                 color: var(--negro);
@@ -179,6 +181,76 @@ main{
 
         img {
             width: 80%;
+        }
+    }
+}
+
+.carrito-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 30px;
+
+    .producto-carrito {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e9e9e9;
+        border-top: 1px solid #e9e9e9;
+
+       /*  background-color: transparent;
+        box-shadow: 5px 5px 10px var(--clarito1),
+        -5px -5px 10px var(--clarito2); */
+
+        .carrito-izq {
+            width: 300px;
+            display: flex;
+            grid-gap: 10px;
+
+            img {
+                width: 120px;
+            }
+
+            .izq-datos {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .carrito-precio {
+                    font-weight: bold;
+
+                    &::before {
+                        font-weight: normal;
+                        content: 'Precio: ';
+                    }
+                }
+            }
+        }
+
+        .carrito-mid {
+            font-weight: bold;
+        }
+
+        button {
+            width: 120px;
+            color: var(--negro);
+            background-color: transparent;
+            border: var(--negro) solid 1px;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+                border: 1px solid var(--a9);
+                background-color: var(--a9);
+                transition: ease 0.2s;
+            }
+
+            &:active {
+                color: #000;
+            }
         }
     }
 }

@@ -18,24 +18,22 @@ const NavBar = () => {
                 <div className="der">
 
                     {/* barra de búsqueda */}
-                    <form>
+                    {/* <form>
                         <button type="submit" className="material-icons-outlined">search</button>
                         <input type="search" placeholder="Buscar producto.." required></input>
-                    </form>
+                    </form> */}
                     
                     {/* dark/light mode */}
                     <button className="material-icons-outlined tema">bedtime</button>
-                    <button className="material-icons-outlined tema">light_mode</button>
+                    {/* <button className="material-icons-outlined tema">light_mode</button> */}
 
                     {/* carrito de compras */}
                     <CartWidget/>
 
-                    <div className="account">
-                        {/* iniciar sesion + modal */}
+                    {/* <div className="account">
                         <a href="#" id="open-login">Iniciar sesión</a>
-                        {/* crear cuenta + modal */}
                         {<a href="#" id="open-signin">Crear cuenta</a>}
-                    </div>
+                    </div> */}
                 </div>
             </nav>
             

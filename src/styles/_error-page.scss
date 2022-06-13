@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+@import 'variables';
+
+.error-page-container {
+    //CAMBIAR ESTO ¬ CUANDO LOGRE ORDENAR ROUTERS (app)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    .error-page {
+        font-size: 5rem;
+        color: var(--negro);
+        animation: glitch 1s linear infinite;
+    }
+    
+    @keyframes glitch {
+    
+        2%,
+        64% {
+            transform: translate(2px, 0) skew(0deg);
+        }
+    
+        4%,
+        60% {
+            transform: translate(-2px, 0) skew(0deg);
+        }
+    
+        62% {
+            transform: translate(0, 0) skew(5deg);
+        }
+    }
+    
+    .error-page:before,
+    .error-page:after {
+        content: attr(title);
+        position: absolute;
+        left: 0;
+    }
+    
+    .error-page:before {
+        animation: glitchTop 1s linear infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+    
+    @keyframes glitchTop {
+    
+        2%,
+        64% {
+            transform: translate(2px, -2px);
+        }
+    
+        4%,
+        60% {
+            transform: translate(-2px, 2px);
+        }
+    
+        62% {
+            transform: translate(13px, -1px) skew(-13deg);
+        }
+    }
+    
+    .error-page:after {
+        animation: glitchBotom 1.5s linear infinite;
+        clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+    
+    @keyframes glitchBotom {
+    
+        2%,
+        64% {
+            transform: translate(-2px, 0);
+        }
+    
+        4%,
+        60% {
+            transform: translate(-2px, 0);
+        }
+    
+        62% {
+            transform: translate(-22px, 5px) skew(21deg);
+        }
+    }
+}

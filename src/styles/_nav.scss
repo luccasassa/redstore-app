@@ -54,6 +54,8 @@ header {
                     width: 35px;
                     height: 35px;
                     border: none;
+                    background-color: var(--nav);
+                    color: var(--negro);
                     cursor: pointer;
 
                     &:hover {
@@ -72,6 +74,8 @@ header {
                     height: 35px;
                     padding-left: 5px;
                     border: none;
+                    background-color: var(--blanco);
+                    color: var(--negro);
                     outline: none;
                     caret-color: var(--a9);
                 }
@@ -321,7 +325,7 @@ header {
     }
 
     .bot {
-        background-color: #f1f1f1;
+        background-color: var(--nav);
         display: flex;
         justify-content: space-around;
         color: var(--b3);

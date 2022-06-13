@@ -3,17 +3,23 @@
 @import 'nav';
 @import 'main';
 @import 'footer';
+@import 'error-page';
 
 .dark {
     --b1: #111;
     --b2: #f9f9f9;
     --b3: #f9f9f9;
 
-    --nav: #2b2929;
+    --nav: #222;
     
     --blanco: #000;
     --negro: #fff;
     
     --sombraOscura: rgba(250, 250, 250, 0.5);
-    --sombraClarita: rgba(250, 250, 250, 0.2);
+    --sombraClarita: rgba(250, 250, 250, 0.1);
+
+    --clarito1: #0b090a;
+    --clarito2: transparent;
+
+    --hrline: #242423; //PASAR A OSCURAS
 }

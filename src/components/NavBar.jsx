@@ -3,6 +3,25 @@ import CartWidget from "./CartWidget"
 import Categories from "./Categories"
 
 const NavBar = () => {
+    
+    function darkmode() {
+        const d = document
+        const logo = d.querySelector(".logo")
+        const tema = d.querySelector(".tema")
+
+        if (!d.body.classList.contains("dark")) {
+            d.body.classList.add("dark")
+            tema.textContent = "light_mode"
+            logo.src = "https://i.imgur.com/F8Vj4ZJ.png"
+        
+        } else {
+            d.body.classList.remove("dark")
+            localStorage.setItem('temaOscuro', 'false')
+            tema.textContent = "bedtime"
+            logo.src = "https://i.imgur.com/5GRUqAi.png"
+        }
+    }
+
     return (
         <header>
             {/* NAV TOP (GENERAL) */}
@@ -18,22 +37,21 @@ const NavBar = () => {
                 <div className="der">
 
                     {/* barra de búsqueda */}
-                    {/* <form>
+                    <form>
                         <button type="submit" className="material-icons-outlined">search</button>
                         <input type="search" placeholder="Buscar producto.." required></input>
-                    </form> */}
+                    </form>
                     
                     {/* dark/light mode */}
-                    <button className="material-icons-outlined tema">bedtime</button>
-                    {/* <button className="material-icons-outlined tema">light_mode</button> */}
+                    <button onClick={darkmode} className="material-icons-outlined tema">bedtime</button>
 
                     {/* carrito de compras */}
                     <CartWidget/>
 
-                    {/* <div className="account">
+                    <div className="account">
                         <a href="#" id="open-login">Iniciar sesión</a>
                         {<a href="#" id="open-signin">Crear cuenta</a>}
-                    </div> */}
+                    </div>
                 </div>
             </nav>
             

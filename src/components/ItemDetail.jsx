@@ -23,10 +23,16 @@ const ItemDetail = ({ id, title, subtitle, card, description, price, stock, img 
                 <span className="descripcion-detail">{description}</span>
                 <span className="precio-detail">{price}</span>
 
-                { quantity > 0  
-                    ? <Link to='/Carrito'>
-                        <button className="ver-carrito">VER CARRITO</button>
-                      </Link> 
+                { quantity > 0 
+                    ? <div className="post-agregar">
+                        <Link to='/Carrito'>
+                            <button className="ver-carrito">VER CARRITO</button>
+                        </Link> 
+
+                        <Link to='/'>
+                            <button className="seguir-comprando">SEGUIR COMPRANDO</button>
+                        </Link>
+                      </div>
                     : <ItemCount stock={stock}  onAdd={handleOnAdd} initial={getProduct(id)?.quantity}/>
                 }
             </div>

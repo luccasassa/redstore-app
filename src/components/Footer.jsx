@@ -1,14 +1,9 @@
 const Footer = () => {
 
-    document.querySelector('#newsletter').addEventListener('submit', (e) => {
-        e.preventDefault()
-        alert('GRACIAS POR SUSCRIBIRTE A NUESTRO NEWSLETTER')
-    })
-
     return (
         <footer class="swiper-slide">
-            {/* newsletter */}
-            <div class="newsletter">
+
+            {/* <div class="newsletter">
                 <span>Suscribite a nuestro Newsletter!</span>
 
                 <form id="newsletter">
@@ -17,7 +12,6 @@ const Footer = () => {
                 </form>
             </div>
 
-            {/* redes sociales */}
             <div class="social">
                 <div class="redes">
                     <div class="icon facebook">
@@ -47,7 +41,7 @@ const Footer = () => {
                 </div>
 
                 <span>Nuestras redes</span>
-            </div>
+            </div> */}
         </footer>
     )
 }

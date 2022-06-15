@@ -11,6 +11,7 @@ const NavBar = () => {
 
         if (!d.body.classList.contains("dark")) {
             d.body.classList.add("dark")
+            localStorage.setItem('temaOscuro', 'true')
             tema.textContent = "light_mode"
             logo.src = "https://i.imgur.com/F8Vj4ZJ.png"
         
@@ -38,12 +39,12 @@ const NavBar = () => {
 
                     {/* barra de búsqueda */}
                     <form>
-                        <button type="submit" className="material-icons-outlined">search</button>
+                        <button type="submit" className="material-icons-outlined" title="Buscar">search</button>
                         <input type="search" placeholder="Buscar producto.." required></input>
                     </form>
                     
                     {/* dark/light mode */}
-                    <button onClick={darkmode} className="material-icons-outlined tema">bedtime</button>
+                    <button onClick={darkmode} className="material-icons-outlined tema" title="Cambiar modo">bedtime</button>
 
                     {/* carrito de compras */}
                     <CartWidget/>

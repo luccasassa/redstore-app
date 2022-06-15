@@ -48,7 +48,7 @@ h1 {
 .carrito-vacio, .not-found {
     display: flex;
     justify-content: center;
-    margin: 6.25rem;
+    margin: 6.25rem auto 15rem auto;
     font-size: 3rem;
 }
 
@@ -57,11 +57,12 @@ main{
         text-decoration: none;
         color: var(--b2);
     }
-
+    
     .productos {
+        margin: 3rem 0;
         display: grid;
         grid-template-columns: repeat(auto-fill, 300px);
-        grid-gap: 35px;
+        grid-gap: 2.1875rem;
         justify-content: center;
 
         .producto {
@@ -111,7 +112,7 @@ main{
 }
 
 .item-detail-container {
-    margin-top: 1.7rem;
+    margin: 3rem 0;
 
     .item-detail {
         display: grid;
@@ -224,6 +225,7 @@ main{
 }
 
 .carrito-container {
+    margin: 3rem 0;
     display: flex;
     flex-direction: column;
     grid-gap: 50px;
@@ -331,12 +333,7 @@ main{
 }
 
 .loader {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
+    margin: 30vh auto;
     width: 175px;
     height: 100px;
 

@@ -27,7 +27,7 @@ const ItemDetail = ({ id, title, subtitle, card, description, price, stock, img 
                     ? <div className="post-agregar">
                         <Link to='/Carrito'>
                             <button className="ver-carrito">VER CARRITO</button>
-                        </Link> 
+                        </Link>
 
                         <Link to='/'>
                             <button className="seguir-comprando">SEGUIR COMPRANDO</button>

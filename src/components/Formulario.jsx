@@ -54,43 +54,43 @@ const Formulario = () => {
     return (
         <div>
             <div className="formulario-container">
-                    {creatingOrder 
+                {creatingOrder 
+                ?
+                <Loader />
+                :
+                orderId
                     ?
-                    <Loader />
+                    <div className="compra-realizada">
+                        {orderId && <h1>COMPRA REALIZADA!</h1>}
+
+                        <span className="numero-orden">El número de su orden es: <b>{orderId}</b></span>
+
+                        <Link to={`/`} className='volver-inicio'><button>VOLVER AL INICIO</button></Link>
+                    </div>
                     :
-                    orderId
-                        ?
-                        <div className="compra-realizada">
-                            {orderId && <h1>COMPRA REALIZADA!</h1>}
+                    <div>
+                        <h1>Confirmación de compra</h1>
+                        <form onSubmit={sendOrder} onChange={handleChange}>
 
-                            <span className="numero-orden">El número de su orden es: <b>{orderId}</b></span>
+                            <div className="dato-form">
+                                {/* <label>Nombre y apellido:</label> */}
+                                <input autocomplete="off" name="name" defaultValue={formData.name} required placeholder="Nombre y Apellido"/>
+                            </div>
 
-                            <Link to={`/`} className='volver-inicio'><button>VOLVER AL INICIO</button></Link>
-                        </div>
-                        :
-                        <div>
-                            <h1>Confirmación de compra</h1>
-                            <form onSubmit={sendOrder} onChange={handleChange}>
+                            <div className="dato-form">
+                                {/* <label>Teléfono:</label> */}
+                                <input autocomplete="off" name="phone" defaultValue={formData.phone} required placeholder="Teléfono"/>
+                            </div>
 
-                                <div className="dato-form">
-                                    {/* <label>Nombre y apellido:</label> */}
-                                    <input autocomplete="off" name="name" defaultValue={formData.name} required placeholder="Nombre y Apellido"/>
-                                </div>
+                            <div className="dato-form">
+                                {/* <label>E-mail:</label> */}
+                                <input autocomplete="off" name="email" defaultValue={formData.email} required placeholder="E-mail"/>
+                            </div>
 
-                                <div className="dato-form">
-                                    {/* <label>Teléfono:</label> */}
-                                    <input autocomplete="off" name="phone" defaultValue={formData.phone} required placeholder="Teléfono"/>
-                                </div>
-
-                                <div className="dato-form">
-                                    {/* <label>E-mail:</label> */}
-                                    <input autocomplete="off" name="email" defaultValue={formData.email} required placeholder="E-mail"/>
-                                </div>
-
-                                <button className="confirmar-pedido" disabled={ !formData.name || !formData.phone || !formData.email || cart.length === 0}>Confirmar pedido</button>
+                            <button className="confirmar-pedido" disabled={ !formData.name || !formData.phone || !formData.email || cart.length === 0}>Confirmar pedido</button>
                         </form>
-                        </div>
-                    }
+                    </div>
+                }
             </div>
         </div>
     )

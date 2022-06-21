@@ -4,31 +4,31 @@ const Categories = () => {
     return (
         <nav className="bot">
             <div>
-                <Link to={'/Categoria/Accesorios'}>ACCESORIOS</Link>
+                <Link to={'/Accesorios'}>ACCESORIOS</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Altavoces'}>ALTAVOCES</Link>
+                <Link to={'/Altavoces'}>ALTAVOCES</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Amplificadores'}>AMPLIFICADORES</Link>
+                <Link to={'/Amplificadores'}>AMPLIFICADORES</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Auriculares'}>AURICULARES</Link>
+                <Link to={'/Auriculares'}>AURICULARES</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Camaras'}>CAMARAS</Link>
+                <Link to={'/Camaras'}>CAMARAS</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Home'}>HOME</Link>
+                <Link to={'/Home'}>HOME</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Objetivos'}>OBJETIVOS</Link>
+                <Link to={'/Objetivos'}>OBJETIVOS</Link>
             </div>
             <div>
-                <Link to={'/Categoria/PlayStation®'}>PLAYSTATION®</Link>
+                <Link to={'/PlayStation®'}>PLAYSTATION®</Link>
             </div>
             <div>
-                <Link to={'/Categoria/Reproductores'}>REPRODUCTORES</Link>
+                <Link to={'/Reproductores'}>REPRODUCTORES</Link>
             </div>
         </nav>
     )

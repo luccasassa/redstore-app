@@ -7,6 +7,7 @@
     background-color: transparent;
     border: var(--negro) solid 1px;
     padding: 10px;
+    transition: .5s;
     cursor: pointer;
 
     &:hover {
@@ -19,6 +20,13 @@
     &:active {
         color: #000;
     }
+
+    &:disabled {
+        background-color: #777;
+        color: #ccc;
+        border: 1px solid #ccc;
+        transition: .5s;
+    }
 }
 
 %btn-apple {
@@ -27,6 +35,7 @@
     background-color: transparent;
     border: var(--negro) solid 1px;
     padding: 10px;
+    transition: .5s;
     cursor: pointer;
 
     &:hover {
@@ -38,6 +47,13 @@
 
     &:active {
         color: #000;
+    }
+
+    &:disabled {
+        background-color: #777;
+        color: #ccc;
+        border: 1px solid #ccc;
+        transition: .5s;
     }
 }
 
@@ -328,6 +344,72 @@ main{
 
         .confirmar-compra {
             @extend %btn-apple;
+        }
+    }
+}
+
+.formulario-container {
+    .compra-realizada {
+        display: flex;
+        flex-direction: column;
+        
+        .numero-orden {
+            text-align: center;
+            font-size: 2rem;
+
+            b {
+                user-select: text;
+            }
+        }
+
+        .volver-inicio {
+            width: 200px;
+            margin: 40px auto;
+            
+            button {
+                @extend %btn-tomato;
+                margin: 0;
+            }
+        }
+    }
+
+    form {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .dato-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            label {
+                font-size: .9rem;
+            }
+
+            input {
+                width: 300px;
+                height: 35px;
+                padding: 0 5px;
+                border: none;
+                background-color: var(--blanco);
+                color: var(--negro);
+                font-size: 1rem;
+                outline: none;
+                caret-color: var(--a9);
+
+                &::placeholder {
+                    font-size: .9rem
+                }
+            }
+        }
+
+        .confirmar-pedido {
+            @extend %btn-apple;
+            margin: 50px 0 0 0;
         }
     }
 }

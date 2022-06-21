@@ -1,7 +1,7 @@
 const Footer = () => {
 
     return (
-        <footer class="swiper-slide">
+        <footer className="swiper-slide">
 
             {/* <div class="newsletter">
                 <span>Suscribite a nuestro Newsletter!</span>

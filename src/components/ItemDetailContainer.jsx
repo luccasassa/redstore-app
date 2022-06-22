@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-// import { getProductsById } from '../asyncmock'
 import ItemDetail from './ItemDetail'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../services/firebase'
@@ -17,6 +16,7 @@ const ItemDetailContainer = () => {
             
             const product = { id: response.id, ...response.data()}
             setProduct(product)
+            
         }).catch(e => {
             console.log(e)
         })

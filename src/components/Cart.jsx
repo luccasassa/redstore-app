@@ -11,13 +11,13 @@ const Cart = () => {
 
     /* const createOrder = () => {
         const objOrder = {
-            buyer: {
-                name: '',
-                email: '',
-                phone: ''
-            },
-            items: cart,
-            total: totalPrice()
+            // buyer: {
+                // name: '',
+                // email: '',
+                // phone: ''
+            // },
+            items: cart
+            // total: totalPrice()
         }
 
         const ids = cart.map(prod => prod.id)
@@ -49,7 +49,7 @@ const Cart = () => {
             }
         }).then(({ id }) => {
             batch.commit()
-            vaciar()
+            // vaciar()
             alert(`El id de la orden es: ${id}`)
         }).catch(e => {
             console.log('ERROR '+ e)
@@ -61,51 +61,51 @@ const Cart = () => {
             <h1>Carrito de compras</h1>
 
             {quantity > 0
-                ?
-                    <div className="carrito-container">
-                        <div className="productos-carrito">
-                            {cart.map(prod => {
-                                return(
-                                    <div key={prod.id} className='producto-carrito'>
-                                        
-                                        <div className="carrito-izq">
-                                            <img src={prod.img}/>
+            ?
+                <div className="carrito-container">
+                    <div className="productos-carrito">
+                        {cart.map(prod => {
+                            return(
+                                <div key={prod.id} className='producto-carrito'>
+                                    
+                                    <div className="carrito-izq">
+                                        <img src={prod.img}/>
 
-                                            <div className="izq-datos">
-                                                <span className="carrito-titulo">{prod.card}</span>
-                                                <span className="carrito-precio">${prod.price * prod.quantity}</span>
-                                            </div>
+                                        <div className="izq-datos">
+                                            <span className="carrito-titulo">{prod.card}</span>
+                                            <span className="carrito-precio">${prod.price * prod.quantity}</span>
                                         </div>
-
-                                        <div className="carrito-mid">
-                                            <span className="carrito-cantidad">x{prod.quantity}</span>
-                                        </div>
-
-                                        <button onClick={() => removeItem(prod.id)}>ELIMINAR</button>
                                     </div>
-                                )})
-                            }
+
+                                    <div className="carrito-mid">
+                                        <span className="carrito-cantidad">x{prod.quantity}</span>
+                                    </div>
+
+                                    <button onClick={() => removeItem(prod.id)}>ELIMINAR</button>
+                                </div>
+                            )})
+                        }
+                    </div>
+
+                    <div className="cantidades-totales-carrito">
+                        <div className="cantidades-texto">
+                            <span>Productos:</span>
+                            <span>Precio total:</span>
                         </div>
 
-                        <div className="cantidades-totales-carrito">
-                            <div className="cantidades-texto">
-                                <span>Productos:</span>
-                                <span>Precio total:</span>
-                            </div>
-
-                            <div className="cantidades-numeros">
-                                <span className="cantidad-total">{quantity}</span>
-                                <span className="precio-total">{totalPrice()}</span>
-                            </div>
-                        </div>
-
-                        <div className="acciones-carrito">
-                            <button className="vaciar-carrito" onClick={vaciar}>VACIAR CARRITO</button>
-                            <Link to={'/Formulario'}><button /* onClick={createOrder} */ className="confirmar-compra">CONFIRMAR COMPRA</button></Link>
+                        <div className="cantidades-numeros">
+                            <span className="cantidad-total">{quantity}</span>
+                            <span className="precio-total">{totalPrice()}</span>
                         </div>
                     </div>
-                :
-                    <span className="carrito-vacio">SU CARRITO ESTÁ VACÍO</span>
+
+                    <div className="acciones-carrito">
+                        <button className="vaciar-carrito" onClick={vaciar}>VACIAR CARRITO</button>
+                        <Link to={'/Formulario'}><button /* onClick={createOrder} */ className="confirmar-compra">CONFIRMAR COMPRA</button></Link>
+                    </div>
+                </div>
+            :
+                <span className="carrito-vacio">SU CARRITO ESTÁ VACÍO</span>
             }
         </div>
 

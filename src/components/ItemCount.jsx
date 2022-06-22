@@ -2,17 +2,17 @@ import { useState } from 'react'
 
 const ItemCount = ({stock, initial = 1, onAdd})=> {
 
-    const [count, setCount] = useState(initial)
+    const [quantity, setQuantity] = useState(initial)
 
     const increment = () => {
-        if(count < stock){
-            setCount(count + 1);
+        if(quantity < stock){
+            setQuantity(quantity + 1);
         }
     }
 
     const decrement = () => {
         if(count > initial){
-            setCount(count - 1);
+            setQuantity(quantity - 1);
         }
     }
 
@@ -26,14 +26,13 @@ const ItemCount = ({stock, initial = 1, onAdd})=> {
                 <div className='producto-eleccion'>
                     <div className="cantidades">
                         <button className='restar' onClick={decrement}>-</button>
-                        <span className='count'>{count}</span>
+                        <span className='count'>{quantity}</span>
                         <button className='sumar' onClick={increment}>+</button>
                     </div>
 
-                    <button className="agregar" onClick={() => onAdd(count)}>AGREGAR AL CARRITO</button>
+                    <button className="agregar" onClick={() => onAdd(quantity)}>AGREGAR AL CARRITO</button>
                 </div>
             }
-                
         </>
     )
 }

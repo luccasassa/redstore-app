@@ -1,60 +1,11 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import CartContext from "../context/CartContext";
-import { addDoc, collection, updateDoc, doc, getDocs, query, where, documentId, writeBatch } from 'firebase/firestore';
-import { db, collectionsName } from '../services/firebase';
 import { Link } from "react-router-dom";
 
 const Cart = () => {
 
     const { cart, removeItem, vaciar, getQuantity, totalPrice } = useContext(CartContext)
     const quantity = getQuantity()
-
-    /* const createOrder = () => {
-        const objOrder = {
-            // buyer: {
-                // name: '',
-                // email: '',
-                // phone: ''
-            // },
-            items: cart
-            // total: totalPrice()
-        }
-
-        const ids = cart.map(prod => prod.id)
-
-        const collectionRef = collection(db, 'products')
-        
-        const batch = writeBatch(db)
-        
-        const outOfStock = []
-
-        getDocs(query(collectionRef, where(documentId(), 'in', ids)))
-        .then(response => {
-            response.docs.forEach(doc => {
-                const dataDoc = doc.data()
-                const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity
-
-                if(dataDoc.stock >= prodQuantity) {
-                    batch.update(doc.ref, { stock: dataDoc.stock - prodQuantity})
-                } else {
-                    outOfStock.push({ id: doc.id, ...dataDoc})
-                }
-            })
-        }).then(() => {
-            if(outOfStock.length === 0) {
-                const collectionRef = collection(db, 'orders')
-                return addDoc(collectionRef, objOrder)
-            } else {
-                return Promise.reject({ type: 'out_of_stock', products: outOfStock})
-            }
-        }).then(({ id }) => {
-            batch.commit()
-            // vaciar()
-            alert(`El id de la orden es: ${id}`)
-        }).catch(e => {
-            console.log('ERROR '+ e)
-        })
-    } */
 
     return (
         <div>
@@ -101,7 +52,7 @@ const Cart = () => {
 
                     <div className="acciones-carrito">
                         <button className="vaciar-carrito" onClick={vaciar}>VACIAR CARRITO</button>
-                        <Link to={'/Formulario'}><button /* onClick={createOrder} */ className="confirmar-compra">CONFIRMAR COMPRA</button></Link>
+                        <Link to={'/Formulario'}><button className="confirmar-compra">CONFIRMAR COMPRA</button></Link>
                     </div>
                 </div>
             :

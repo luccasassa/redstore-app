@@ -1,15 +1,18 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import { db } from "../services/firebase";
-import { addDoc, collection, Timestamp } from "firebase/firestore";
+import { addDoc, collection, Timestamp, getDocs, query, where, documentId, writeBatch } from "firebase/firestore";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import CartContext from '../context/CartContext';
 import Loader from "./Loader";
 
 const Formulario = () => {
 
-    const { cart, vaciar, totalPrice } = useContext(CartContext)
+    const { cart, vaciar, getQuantity, totalPrice } = useContext(CartContext)
+    
+    const [loading, setLoading] = useState(false)
     
     const [orderId, setOrderId] = useState("");
+
     const [creatingOrder, setCreatingOrder] = useState(false);
     
     const [formData, setFormData] = useState({
@@ -18,7 +21,7 @@ const Formulario = () => {
         phone: ""
     });
 
-    const handleChange = (e) => {
+    const handleChange = e => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -38,17 +41,48 @@ const Formulario = () => {
         };
         
         const orderCollection = collection(db, "orders");
-        
         addDoc(orderCollection, newOrder)
-        .then(resp =>
-            setOrderId(resp.id)
-        ).catch(e =>
+        .then(({ id }) => {
+            setOrderId(id)
+            batch.commit()
+
+        }).catch(e => {
             console.log(e)
-        ).finally(() => {
+            alert(`**ERROR** ALGUNOS PRODUCTOS NO TIENEN STOCK`)
+
+        }).finally(() => {
             setCreatingOrder(false);
             setFormData({ name: "", email: "", phone: "" });
+            setLoading(false)
             vaciar()
         });
+        
+        const ids = cart.map(prod => prod.id)
+
+        const outOfStock = []
+
+        const batch = writeBatch(db)
+        
+        const collectionRef = collection(db, 'products') 
+
+        getDocs(query(collectionRef, where(documentId(),"in", ids)))
+        .then(response =>{
+            response.docs.forEach(doc =>{
+                const dataDoc = doc.data()
+
+                const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity
+
+                if(dataDoc.stock >= prodQuantity) {
+                    batch.update(doc.ref, {stock: dataDoc.stock - prodQuantity})
+                } else{
+                    outOfStock.push({id: doc.id, ...dataDoc})
+                }
+            })
+        })
+        
+        if(loading) {
+            return <Loader/>
+        }
     };
     
     return (

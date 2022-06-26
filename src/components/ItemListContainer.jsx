@@ -37,11 +37,13 @@ const ItemListContainer = ({titulo}) => {
 
     return (
         <main>
-            <h1>{categoryId ? categoryId : titulo}</h1>
+            <h1>{ categoryId ? categoryId : titulo }</h1>
 
             { products.length > 0
                 ? <ItemList products={products} />
-                : <h2>No hay productos</h2>
+                : <div className="categoria-no-encontrada">
+                    CATEGORÍA NO ENCONTRADA
+                </div>
             }
         </main>
     )

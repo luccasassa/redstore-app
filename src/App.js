@@ -1,6 +1,5 @@
 import './styles/general.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -23,7 +22,7 @@ const App = () => {
             <Route path='/' element={<ItemListContainer titulo="Todos los productos"/>}/>
             <Route path='*' element={<ErrorPage/>}/>
             <Route path='/:categoryId' element={<ItemListContainer />}/>
-            <Route path='/:categoryId/:productId/:titleId' element={<ItemDetailContainer />}/>
+            <Route path='/:categoryId/:productId/:title' element={<ItemDetailContainer />}/>
             <Route path='/Formulario' element={<Formulario/>}/>
             
             <Route path='/Carrito' element={<Cart/>}/>

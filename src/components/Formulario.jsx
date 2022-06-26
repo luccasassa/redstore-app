@@ -11,9 +11,9 @@ const Formulario = () => {
     
     const [loading, setLoading] = useState(false)
     
-    const [orderId, setOrderId] = useState("");
+    const [orderId, setOrderId] = useState("")
 
-    const [creatingOrder, setCreatingOrder] = useState(false);
+    const [creatingOrder, setCreatingOrder] = useState(false)
     
     const [formData, setFormData] = useState({
         name: "",
@@ -29,9 +29,9 @@ const Formulario = () => {
     };
     
     const sendOrder = (e) => {
-        e.preventDefault();
-        setCreatingOrder(true);
-        delete formData.emailConfirm;
+        e.preventDefault()
+        setCreatingOrder(true)
+        delete formData.emailConfirm
 
         const newOrder = {
             buyer: formData,
@@ -51,7 +51,7 @@ const Formulario = () => {
             alert(`**ERROR** ALGUNOS PRODUCTOS NO TIENEN STOCK`)
 
         }).finally(() => {
-            setCreatingOrder(false);
+            setCreatingOrder(false)
             setFormData({ name: "", email: "", phone: "" });
             setLoading(false)
             vaciar()

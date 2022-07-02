@@ -42,7 +42,7 @@ const ItemListContainer = ({titulo}) => {
             { products.length > 0
                 ? <ItemList products={products} />
                 : <div className="categoria-no-encontrada">
-                    CATEGORÍA NO ENCONTRADA
+                    CATEGORIA NO ENCONTRADA
                 </div>
             }
         </main>

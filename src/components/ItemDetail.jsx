@@ -23,7 +23,7 @@ const ItemDetail = ({ id, title, subtitle, card, description, price, stock, img 
                 <span className="descripcion-detail">{description}</span>
                 <span className="precio-detail">{price}</span>
 
-                { quantity > 0 
+                { quantity > 0
                     ? <div className="post-agregar">
                         <Link to='/Carrito'>
                             <button className="ver-carrito">VER CARRITO</button>

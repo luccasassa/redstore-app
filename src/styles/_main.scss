@@ -68,8 +68,9 @@ h1, h2 {
 .categoria-no-encontrada {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 6.25rem auto 15rem auto;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h1 {
@@ -113,7 +114,6 @@ main{
                 position: absolute;
                 top: 30%;
                 left: 0;
-                // transform: rotate(320deg) translate(-45px,1px);
                 z-index: 2;
             }
 
@@ -408,7 +408,7 @@ main{
     }
 
     form {
-        width: 50%;
+        width: 60%;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -419,25 +419,50 @@ main{
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
 
-            label {
-                font-size: .9rem;
+            .obligatorio {
+                position: absolute;
+                left: -10px;
+                color: var(--negro);
             }
 
-            input {
-                width: 300px;
+            input, textarea {
+                width: 400px;
                 height: 35px;
                 padding: 0 5px;
-                border: none;
+                border: 1px solid transparent;
                 background-color: var(--blanco);
                 color: var(--negro);
+                box-shadow: 5px 5px 10px var(--clarito1),
+                -5px -5px 10px var(--clarito2);
                 font-size: 1rem;
                 outline: none;
-                caret-color: var(--a9);
 
                 &::placeholder {
                     font-size: .9rem
                 }
+
+                &:default {
+                    border: 1px solid var(--b1);
+                }
+            }
+            
+            input {
+                &:focus {
+                    &:valid {
+                        border: 1px solid var(--a8);
+                    }
+    
+                    &:invalid {
+                        border: 1px solid var(--a9);
+                    }
+                }
+            }
+
+            textarea {
+                height: 60px;
+                resize: vertical;
             }
         }
 

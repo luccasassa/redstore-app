@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import CartContext from '../context/CartContext';
 import Loader from "./Loader";
 
-const Formulario = () => {
+const Form = () => {
 
-    const { cart, vaciar, getQuantity, totalPrice } = useContext(CartContext)
+    const { cart, vaciar, totalPrice } = useContext(CartContext)
     
     const [loading, setLoading] = useState(false)
     
@@ -17,8 +17,11 @@ const Formulario = () => {
     
     const [formData, setFormData] = useState({
         name: "",
+        surname: "",
+        phone: "",
         email: "",
-        phone: ""
+        adress: "",
+        note: ""
     });
 
     const handleChange = e => {
@@ -107,21 +110,35 @@ const Formulario = () => {
                         <form onSubmit={sendOrder} onChange={handleChange}>
 
                             <div className="dato-form">
-                                {/* <label>Nombre y apellido:</label> */}
-                                <input autocomplete="off" name="name" defaultValue={formData.name} required placeholder="Nombre y Apellido"/>
+                                <span className="obligatorio">*</span>
+                                <input style={{textTransform: 'capitalize'}} autocomplete="off" name="name" defaultValue={formData.name} required placeholder="Nombre" pattern="[a-z]{1,15} " title="SIN ESPACIOS, NUMEROS, NI SIMBOLOS"/>
                             </div>
 
                             <div className="dato-form">
-                                {/* <label>Teléfono:</label> */}
-                                <input autocomplete="off" name="phone" defaultValue={formData.phone} required placeholder="Teléfono"/>
+                                <span className="obligatorio">*</span>
+                                <input style={{textTransform: 'capitalize'}} autocomplete="off" name="surname" defaultValue={formData.surname} required placeholder="Apellido" pattern="[a-z]{1,15}" title="SIN ESPACIOS, NUMEROS, NI SIMBOLOS"/>
                             </div>
 
                             <div className="dato-form">
-                                {/* <label>E-mail:</label> */}
-                                <input autocomplete="off" name="email" defaultValue={formData.email} required placeholder="E-mail"/>
+                                <span className="obligatorio">*</span>
+                                <input autocomplete="off" name="phone" defaultValue={formData.phone} required placeholder="Teléfono" pattern="[0-9+]+" title="SIN ESPACIOS, LETRAS, NI SIMBOLOS"/>
                             </div>
 
-                            <button className="confirmar-pedido" disabled={ !formData.name || !formData.phone || !formData.email || cart.length === 0}>Confirmar pedido</button>
+                            <div className="dato-form">
+                                <span className="obligatorio">*</span>
+                                <input autocomplete="off" name="email" id="email" defaultValue={formData.email} required placeholder="E-mail" title="TU EMAIL SIN ESPACIOS"/>
+                            </div>
+
+                            <div className="dato-form">
+                                <span className="obligatorio">*</span>
+                                <input autocomplete="off" minLength={7} name="adress" defaultValue={formData.adress} required placeholder="Dirección" title="TU DIRECCION DE DOMICILIO OBLIGATORIA"/>
+                            </div>
+
+                            <div className="dato-form">
+                                <textarea name="note" defaultValue={formData.note} placeholder="Nota" title="NOTA OPCIONAL PARA EL VENDEDOR"/>
+                            </div>
+
+                            <button className="confirmar-pedido" disabled={ !formData.name || !formData.surname || !formData.phone || !formData.email || !formData.adress || cart.length === 0}>Confirmar pedido</button>
                         </form>
                     </div>
                 }
@@ -130,4 +147,4 @@ const Formulario = () => {
     )
 }
 
-export default Formulario
+export default Form

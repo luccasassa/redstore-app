@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 import Categories from "./Categories"
-import Search from "./Search"
 
 const NavBar = () => {
     

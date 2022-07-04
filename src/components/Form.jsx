@@ -111,7 +111,7 @@ const Form = () => {
 
                             <div className="dato-form">
                                 <span className="obligatorio">*</span>
-                                <input style={{textTransform: 'capitalize'}} autocomplete="off" name="name" defaultValue={formData.name} required placeholder="Nombre" pattern="[a-z]{1,15} " title="SIN ESPACIOS, NUMEROS, NI SIMBOLOS"/>
+                                <input style={{textTransform: 'capitalize'}} autocomplete="off" name="name" defaultValue={formData.name} required placeholder="Nombre" pattern="[a-z]{1,15}" title="SIN ESPACIOS, NUMEROS, NI SIMBOLOS"/>
                             </div>
 
                             <div className="dato-form">

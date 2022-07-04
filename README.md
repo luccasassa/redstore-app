@@ -34,7 +34,7 @@ Para poder correr este proyecto es necesario configurar las variables de entorno
 
 ## Demo ¬
 
-![Alt Text](./public/vid/demo.gif)
+![Alt Text](./public/vid/demo.mp4)
 
 ## Autor ¬
 

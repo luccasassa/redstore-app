@@ -40,7 +40,7 @@ Para poder correr este proyecto es necesario configurar las variables de entorno
 
 ## Demo ¬
 
-<video src="./public/vid/demo.mp4">Demo</video>
+<video src="https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4"></video>
 
 ## Autor ¬
 

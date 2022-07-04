@@ -8,11 +8,11 @@ E-commerce de productos Sony y merchandising oficial de PlayStation®.
 - Clone del repositorio.
 - Sobre el root del proyecto, usar el comando `npm install` para instalar las dependencias del mismo.
 - Usar `npm start` para correr el proyecto, disponible en [http://localhost:3000](http://localhost:3000).
-- Más info: [deployment](https://facebook.github.io/create-react-app/docs/deployment).
+- Más info: [react/deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
 ## Variables de Entorno ¬
 
-Para poder correr este proyecto es necesario configurar las variables de entorno, la cuales son las credenciales de la base de datos Firebase. Hay un archivo de ejemplo .env.example
+Para poder correr este proyecto es necesario configurar las variables de entorno, la cuales son las credenciales de la base de datos Firebase (.env.example).
 
 `REACT_APP_FIREBASE_apiKey`
 
@@ -35,8 +35,8 @@ Para poder correr este proyecto es necesario configurar las variables de entorno
 
 ## Demo ¬
 
-<video src="https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4"></video>
+<video src="https://user-images.githubusercontent.com/82245595/177201251-eeae7347-176f-414e-8f95-6234d9e9a2d8.mp4"></video>
 
 ## Autor ¬
 
-[@luccasassa](https://github.com/luccasassa/) - [Luca Sassaroli](https://www.linkedin.com/in/luca-sassaroli-2772531a2/)
+[Luca Sassaroli](https://www.linkedin.com/in/luca-sassaroli-2772531a2/) - [@luccasassa](https://github.com/luccasassa/)

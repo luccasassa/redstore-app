@@ -8,6 +8,15 @@ const firebaseConfig = {
   storageBucket: "redstore-ecommerce-ae3a6.appspot.com",
   messagingSenderId: "1098822035756",
   appId: "1:1098822035756:web:b09e7c11436fcbcb87e489"
+
+  /*
+    apiKey: REACT_APP_FIREBASE_apiKey,
+    authDomain: REACT_APP_FIREBASE_authDomain,
+    projectId: REACT_APP_FIREBASE_projectId,
+    storageBucket: REACT_APP_FIREBASE_storageBucket,
+    messagingSenderId: REACT_APP_FIREBASE_messagingSenderId,
+    appId: REACT_APP_FIREBASE_appId
+  */
 }
 
 const app = initializeApp(firebaseConfig)

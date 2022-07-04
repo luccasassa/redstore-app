@@ -20,7 +20,7 @@ const Cart = () => {
                                 <div key={prod.id} className='producto-carrito'>
                                     
                                     <div className="carrito-izq">
-                                        <img src={prod.img}/>
+                                        <img src={prod.img} alt='logo'/>
 
                                         <div className="izq-datos">
                                             <span className="carrito-titulo">{prod.card}</span>

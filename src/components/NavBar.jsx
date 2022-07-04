@@ -30,7 +30,7 @@ const NavBar = () => {
                 {/* NAV IZQUIERDA */}
                 <div className="izq">
                     <Link to={'/'}>
-                        <img className='logo' src="https://i.imgur.com/5GRUqAi.png"></img>
+                        <img className='logo' src="https://i.imgur.com/5GRUqAi.png" alt='logo'></img>
                     </Link>
                 </div>
 
@@ -49,10 +49,10 @@ const NavBar = () => {
                     {/* carrito de compras */}
                     <CartWidget/>
 
-                    {/* <div className="account">
-                        <a href="#" id="open-login">Iniciar sesión</a>
-                        {<a href="#" id="open-signin">Crear cuenta</a>}
-                    </div> */}
+                    <div className="account">
+                        <Link to="#" id="open-login">Iniciar Sesión</Link>
+                        <Link to="#" id="open-signin">Crear Cuenta</Link>
+                    </div>
                 </div>
             </nav>
             

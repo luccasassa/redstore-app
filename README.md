@@ -26,21 +26,16 @@ Para poder correr este proyecto es necesario configurar las variables de entorno
 
 `REACT_APP_FIREBASE_appId`
 
-## Badges ¬
-
-![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
 ## Dependencias ¬
 
+- [Firebase](https://firebase.google.com/).
 - [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start).
+- [Node SASS](https://www.npmjs.com/package/node-sass).
 - [Google Fonts](https://fonts.google.com/).
-- [Font Awesome](https://fontawesome.com/).
 
 ## Demo ¬
 
-<video src="https://user-images.githubusercontent.com/82245595/177201251-eeae7347-176f-414e-8f95-6234d9e9a2d8.mp4"></video>
+<video src="https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4"></video>
 
 ## Autor ¬
 

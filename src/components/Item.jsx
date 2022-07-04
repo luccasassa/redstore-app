@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const Item = ({id,title, img, card, category, price, stock}) => {
+    
     return (
         <>
             {stock < 1
@@ -8,7 +9,7 @@ const Item = ({id,title, img, card, category, price, stock}) => {
                 <Link to={`/${category}/${id}/${title}`}>
                     <div className='producto'>
                             <div className='sin-stock-item'>SIN STOCK</div>
-                            <img src={img}/>
+                            <img src={img} alt='producto'/>
 
                             <div className='producto-detalle'>
                                 <span className='card'>{card}</span>
@@ -20,7 +21,7 @@ const Item = ({id,title, img, card, category, price, stock}) => {
             :   
                 <Link to={`/${category}/${id}/${title}`}>
                     <div className='producto'>
-                            <img src={img}/>
+                            <img src={img} alt='producto'/>
 
                             <div className='producto-detalle'>
                                 <span className='card'>{card}</span>

@@ -43,7 +43,8 @@ const Form = () => {
             total: totalPrice()
         };
         
-        const orderCollection = collection(db, "orders");
+        const orderCollection = collection(db, "orders")
+        
         addDoc(orderCollection, newOrder)
         .then(({ id }) => {
             setOrderId(id)
@@ -55,7 +56,7 @@ const Form = () => {
 
         }).finally(() => {
             setCreatingOrder(false)
-            setFormData({ name: "", email: "", phone: "" });
+            setFormData({ name: "", email: "", phone: "" })
             setLoading(false)
             vaciar()
         });

@@ -11,7 +11,6 @@ const ItemDetail = ({ id, title, subtitle, card, description, price, stock, img 
 
     const handleOnAdd = (quantity) => {
         setQuantity(quantity)
-
         addItem({ id, img, title, subtitle, description, card, price, quantity })
     };
 
@@ -38,7 +37,7 @@ const ItemDetail = ({ id, title, subtitle, card, description, price, stock, img 
             </div>
 
             <div className="right">
-                <img src={img}/>
+                <img src={img} alt='producto'/>
             </div>
         </div>
     )

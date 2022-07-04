@@ -24,8 +24,10 @@ const ItemListContainer = ({titulo}) => {
                 return { id: doc.id, ...doc.data() }
             })
             setProducts(products)
+
         }).catch(e => {
             console.log(e)
+            
         }).finally(() => {
             setLoading(false)
         })
@@ -42,7 +44,7 @@ const ItemListContainer = ({titulo}) => {
             { products.length > 0
                 ? <ItemList products={products} />
                 : <div className="categoria-no-encontrada">
-                    CATEGORIA NO ENCONTRADA
+                    RUTA AÚN NO DISPONIBLE
                 </div>
             }
         </main>

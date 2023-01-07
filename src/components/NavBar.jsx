@@ -38,10 +38,10 @@ const NavBar = () => {
                 <div className="der">
 
                     {/* barra de búsqueda */}
-                    {/* <form>
+                    <form>
                         <button type="submit" className="material-icons-outlined" title="Buscar">search</button>
                         <input type="search" placeholder="Buscar" required style={{textTransform: 'capitalize'}}></input>
-                    </form> */}
+                    </form>
                     
                     {/* dark/light mode */}
                     <button onClick={darkmode} className="material-icons-outlined tema" title="Cambiar modo">bedtime</button>

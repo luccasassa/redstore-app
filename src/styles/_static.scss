@@ -6,7 +6,7 @@ html {
 
 * {
     font-family: var(--font1);
-    user-select: none;
+    // user-select: none;
 
     &::-webkit-scrollbar {
         width: 5px;
